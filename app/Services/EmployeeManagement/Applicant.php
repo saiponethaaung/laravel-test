@@ -9,8 +9,8 @@ class Applicant implements Employee
         return true;
     }
     
-    public function salary()
+    public function salary(): int
     {
-        // TODO: Implement salary() method.
+        return 0;
     }
 }

@@ -2,20 +2,20 @@
 
 namespace App\Services\InternetServiceProvider;
 
-class Mpt
+class Mpt implements ISP
 {
     protected $operator = 'mpt';
-    
+
     protected $month = 0;
-    
+
     protected $monthlyFees = 200;
-    
-    public function setMonth(int $month)
+
+    public function setMonth(int $month): void
     {
         $this->month = $month;
     }
-    
-    public function calculateTotalAmount()
+
+    public function calculateTotalAmount(): int
     {
         return $this->month * $this->monthlyFees;
     }
